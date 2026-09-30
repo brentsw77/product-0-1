@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090a0d">
+  <title>Product 0.1</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<main class="app">
+  <header>
+    <span class="eyebrow">PRODUCT 0.1 • PROTOTYPE</span>
+    <h1>Can your setup do what you want?</h1>
+    <p class="lead">Pick what you own and the experience you want. We check the chain link by link instead of giving you a meaningless score.</p>
+  </header>
+
+  <nav class="tabs" aria-label="Product areas">
+    <button class="tab active" type="button">Analyze</button>
+    <button class="tab" type="button" disabled>My Setup <small>soon</small></button>
+    <button class="tab" type="button" disabled>Troubleshoot <small>soon</small></button>
+  </nav>
+
+  <section class="card">
+    <h2>Your setup</h2>
+    <label>Source
+      <select id="source"></select>
+    </label>
+    <label>Display
+      <select id="display"></select>
+    </label>
+    <label>Connection
+      <select id="connection"></select>
+    </label>
+
+    <h2 class="goal-title">Your goal</h2>
+    <div class="grid">
+      <label>Resolution
+        <select id="resolution">
+          <option value="1080">1080p</option>
+          <option value="1440" selected>1440p</option>
+          <option value="2160">4K</option>
+        </select>
+      </label>
+      <label>Refresh rate
+        <select id="refresh">
+          <option value="60">60Hz</option>
+          <option value="120" selected>120Hz</option>
+          <option value="200">200Hz</option>
+        </select>
+      </label>
+    </div>
+    <button id="analyze" class="primary" type="button">Analyze my setup</button>
+  </section>
+
+  <section id="result" class="card result hidden" aria-live="polite"></section>
+  <footer>Evidence-aware prototype • Unknown stays unknown • No invented compatibility percentages</footer>
+</main>
+<script src="./data/devices.js"></script>
+<script src="./engine/analyze.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
